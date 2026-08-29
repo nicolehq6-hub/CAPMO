@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LATENT — log in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="latent.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="auth-video-wrap">
+  <video class="auth-video" autoplay muted loop playsinline aria-hidden="true">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+  <div class="auth-scrim"></div>
+</div>
+
+<div class="auth-stage">
+  <div class="auth-brand"><span class="dot"></span>LATENT</div>
+
+  <div class="auth-card">
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login" type="button">Log in</button>
+      <button class="auth-tab" data-tab="signup" type="button">Sign up</button>
+    </div>
+
+    <form id="loginForm" class="auth-form active" novalidate>
+      <h2>Welcome back</h2>
+      <p>Log in to reach your rolls, folders, and every frame you've kept.</p>
+      <label>Email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label>Password
+        <input type="password" name="password" autocomplete="current-password" required>
+      </label>
+      <button class="btn primary" type="submit">Log in</button>
+      <span class="auth-error" id="loginError" role="alert"></span>
+    </form>
+
+    <form id="signupForm" class="auth-form" novalidate>
+      <h2>Start your archive</h2>
+      <p>Create an account — no docs, no video, just your photographs.</p>
+      <label>Name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label>Password
+        <input type="password" name="password" autocomplete="new-password" minlength="6" required>
+      </label>
+      <button class="btn primary" type="submit">Create account</button>
+      <span class="auth-error" id="signupError" role="alert"></span>
+    </form>
+
+    <p class="auth-skip">or <a href="latent.html">continue without an account</a></p>
+  </div>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>
